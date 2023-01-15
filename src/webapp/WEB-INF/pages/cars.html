@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car's controller</title>
+</head>
+
+<body>
+
+<div th:each="allCars: ${allCars}">
+    <a th:text="'Марка авто: '+${allCars.getModel()}+
+                ', модель: '+${allCars.getSeries()} +
+                ', лошадних сил: '+ ${allCars.getHorsePower()}"> car </a>
+</div>
+
+
+
+<p></p>
+<p>При запросе /cars выводится весь список. При запросе /cars?count=2 отображается список из 2 машин,
+    при /cars?count=3 - из 3, и тд. При count ≥ 5 - весь список машин.</p>
+<p></p>
+<a href="/">Вернуться на главную страницу</a>
+</body>
+</html>
