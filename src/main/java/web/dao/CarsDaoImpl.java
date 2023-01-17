@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Component
 public class CarsDaoImpl implements CarsDao {
     @Override
-    public List<Cars> index(Integer count) {
+    public List<Cars> gerCarsList(Integer count) {
         List<Cars> cars;
         {
             cars = new ArrayList<>();

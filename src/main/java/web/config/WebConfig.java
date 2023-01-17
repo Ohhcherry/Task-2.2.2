@@ -15,7 +15,6 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 //реализуем applicationContextXML в Java коде
 @Configuration
 @EnableWebMvc
-//путь к контроллеру
 @ComponentScan("web")
 public class WebConfig implements WebMvcConfigurer {
 

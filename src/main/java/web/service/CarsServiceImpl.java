@@ -1,6 +1,7 @@
 package web.service;
 
 import org.springframework.stereotype.Component;
+import web.dao.CarsDao;
 import web.dao.CarsDaoImpl;
 import web.models.Cars;
 
@@ -8,9 +9,9 @@ import java.util.List;
 @Component
 public class CarsServiceImpl implements CarsService {
 
-    CarsDaoImpl carsDao = new CarsDaoImpl();
+    private CarsDao carsDao = new CarsDaoImpl();
     @Override
-    public  List<Cars> index(Integer count){
-        return carsDao.index(count);
+    public  List<Cars> gerCarsList(Integer count){
+        return carsDao.gerCarsList(count);
     }
 }

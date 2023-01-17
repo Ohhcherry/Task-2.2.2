@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface CarsDao {
 
-    List<Cars> index (Integer count);
+    List<Cars> gerCarsList(Integer count);
 
 }
